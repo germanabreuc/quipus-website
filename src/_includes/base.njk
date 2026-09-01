@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} · Quipus</title>
+  <meta name="description" content="{{ description or 'Quipus — Action Tank de comunicación para marcas orientadas a audiencias hispanas.' }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="/assets/img/logos/quipus-isotipo-blanco.png" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="/" aria-label="Quipus — inicio">
+        <img src="/assets/img/logos/quipus-imagotipo-negro.png" alt="Quipus">
+      </a>
+      <nav class="site-nav" aria-label="Principal">
+        <ul class="site-nav__links">
+          <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Quipus</a></li>
+          <li><a href="/recursos/" {% if page.url == "/recursos/" %}aria-current="page"{% endif %}>Recursos</a></li>
+        </ul>
+        <a class="btn btn--primary" href="/hablemos/">Hablemos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <img src="/assets/img/logos/quipus-imagotipo-negro.png" alt="Quipus" style="height:22px;">
+      <span>&copy; {% year %} Quipus. Todos los derechos reservados.</span>
+      <a href="/hablemos/">hola@quipusmx.com</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: germanabreuc/quipus-website
+  branch: main
+
+# Sveltia CMS detecta automáticamente el proxy de OAuth de Netlify
+# (https://api.netlify.com/auth) cuando el sitio corre en Netlify.
+# No hace falta "base_url" mientras el panel se abra desde el dominio
+# publicado en Netlify (quipusmx.com o el subdominio *.netlify.app).
+
+media_folder: "src/assets/img/uploads"
+public_folder: "/assets/img/uploads"
+
+locale: "es"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    label_singular: "Artículo"
+    folder: "src/blog"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    editor:
+      preview: false
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
+      - { label: "Resumen", name: "excerpt", widget: "text", required: false, hint: "Se muestra en el listado de Recursos." }
+      - { label: "Imagen de portada", name: "image", widget: "image", required: false }
+      - { label: "Marcar como ejemplo (Próximamente)", name: "placeholder", widget: "boolean", default: false, hint: "Actívalo solo para contenido de muestra, nunca para un post real." }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "descargables"
+    label: "Descargables"
+    label_singular: "Descargable"
+    folder: "src/descargables"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    editor:
+      preview: false
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Archivo", name: "file", widget: "file", required: false, hint: "Sube el PDF u otro archivo descargable." }
+      - { label: "Marcar como ejemplo (Próximamente)", name: "placeholder", widget: "boolean", default: false }
+      - { label: "permalink", name: "permalink", widget: "hidden", default: false }

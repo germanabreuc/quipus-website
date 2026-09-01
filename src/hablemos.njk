@@ -1,0 +1,69 @@
+---
+layout: base.njk
+title: "Hablemos"
+description: "Cuéntame brevemente qué está pasando y qué te gustaría resolver."
+---
+
+<section class="hero" style="padding-block: var(--space-5) var(--space-4);">
+  <div class="container hero__inner">
+    <span class="eyebrow">Hablemos</span>
+    <h1>Probablemente ya tienes una idea de lo que necesitas.</h1>
+    <p class="lede">Y si todavía cuesta ponerlo en palabras, también está bien.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="grid grid--2" style="align-items:start;">
+      <div>
+        <p class="lede">Puedes escribirnos si:</p>
+        <ul style="padding-left:1.1em; line-height:1.9;">
+          <li>Tu marca necesita una estrategia de comunicación.</li>
+          <li>Tienes muchas acciones funcionando al mismo tiempo y hace falta una dirección común.</li>
+          <li>Quieres comunicar mejor un producto, una idea o una etapa de la empresa.</li>
+          <li>Necesitas desarrollar una campaña, un contenido o una experiencia.</li>
+          <li>Buscas a alguien que pueda acompañar el proyecto desde la estrategia hasta la ejecución.</li>
+          <li>O simplemente hay algo en la comunicación de tu marca que sabes que podría funcionar mejor.</li>
+        </ul>
+        <p>Ese también es un buen punto de partida.</p>
+      </div>
+
+      <div class="card card--gradient-edge">
+        <h2 class="h3">Déjame tu mensaje.</h2>
+        <p>
+          Cuéntame brevemente qué está pasando y qué te gustaría resolver. Yo (Germán) voy a leerlo y te
+          voy a responder. Si veo que podemos ayudarte, te propondré una conversación para entender mejor
+          el proyecto. Si encuentro una ruta que pueda servirte, te la voy a decir con claridad.
+        </p>
+
+        <form class="form" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contacto">
+          <p class="visually-hidden">
+            <label>No llenar si eres humano: <input name="bot-field"></label>
+          </p>
+
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div>
+            <label for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa">
+          </div>
+          <div>
+            <label for="correo">Correo</label>
+            <input type="email" id="correo" name="correo" required>
+          </div>
+          <div>
+            <label for="mensaje">¿Qué necesitas resolver?</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+        </form>
+
+        <p style="margin-top:1.5rem; font-family: var(--font-display); font-size:1.3rem;">Te voy a
+          responder.</p>
+      </div>
+    </div>
+  </div>
+</section>

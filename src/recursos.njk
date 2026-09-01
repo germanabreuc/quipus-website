@@ -1,0 +1,57 @@
+---
+layout: base.njk
+title: "Recursos"
+description: "Blog y descargables de Quipus."
+permalink: "/recursos/"
+---
+
+<section class="hero" style="padding-block: var(--space-5) var(--space-4);">
+  <div class="container hero__inner">
+    <span class="eyebrow">Recursos</span>
+    <h1>Ideas para pensar mejor tu comunicación.</h1>
+    <p class="lede">Blog y descargables de Quipus. Esta sección está empezando — muy pronto vas a
+      encontrar artículos y materiales reales aquí.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="section-head">
+      <hr class="divider">
+      <h2 class="h3">Blog</h2>
+    </div>
+    <div class="grid grid--2">
+      {% for post in collections.blogPosts %}
+        <a class="recurso-card" href="{{ post.url }}" style="text-decoration:none;">
+          {% if post.data.placeholder %}<span class="badge">Próximamente</span>{% endif %}
+          <h3>{{ post.data.title }}</h3>
+          <p class="recurso-card__meta">{{ post.data.date | readableDate }}</p>
+          <p>{{ post.data.excerpt }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="section-head">
+      <hr class="divider">
+      <h2 class="h3">Descargables</h2>
+    </div>
+    <div class="grid grid--2">
+      {% for item in collections.descargables %}
+        <div class="recurso-card">
+          {% if item.data.placeholder %}<span class="badge">Próximamente</span>{% endif %}
+          <h3>{{ item.data.title }}</h3>
+          <p>{{ item.data.description }}</p>
+          {% if item.data.file %}
+            <a class="btn btn--ghost" href="{{ item.data.file }}">Descargar</a>
+          {% else %}
+            <span class="btn btn--ghost" aria-disabled="true" style="opacity:.5; cursor:not-allowed;">Descargar (próximamente)</span>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

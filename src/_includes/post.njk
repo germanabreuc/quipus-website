@@ -1,0 +1,19 @@
+---
+layout: base.njk
+---
+<article class="section--tight">
+  <div class="container" style="max-width:760px;">
+    {% if placeholder %}<span class="badge">Próximamente</span>{% endif %}
+    <span class="eyebrow" style="display:block; margin-top:1rem;">{{ date | readableDate }}</span>
+    <h1>{{ title }}</h1>
+    {% if image %}
+      <div class="photo photo--wide" style="margin-block:2rem;">
+        <img src="{{ image }}" alt="{{ title }}" loading="lazy">
+      </div>
+    {% endif %}
+    <div class="post-body">
+      {{ content | safe }}
+    </div>
+    <p style="margin-top:3rem;"><a class="btn btn--ghost" href="/recursos/">&larr; Volver a Recursos</a></p>
+  </div>
+</article>
