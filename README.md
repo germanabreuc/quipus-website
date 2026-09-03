@@ -84,20 +84,22 @@ npm run build     # genera el sitio estático en _site/
 ## Notas de contenido y assets
 
 - El texto de las páginas viene tal cual de `QUIPUS_contenido_sitio_web.md` (Drive), sin reescribir.
-- La tipografía **Chomsky** está licenciada bajo SIL Open Font License 1.1 (verificado en los metadatos
-  del propio archivo `.otf`) — permite uso, embebido y redistribución como webfont sin costo ni
-  restricción adicional.
+- Tipografía: **Fraunces** (Google Fonts) para títulos, **Inter** para cuerpo. Se reemplazó Chomsky tras
+  la revisión de diseño — el peso configurado (`"SOFT" 0, "WONK" 0`) evita el aspecto "wonky" por
+  defecto de la fuente variable.
 - Los gradientes de marca se recrearon en CSS a partir de la paleta oficial (`#7344ED`, `#D84747`,
   `#0DC5C7`, `#EDC022`), siguiendo la descripción del brandbook ("creado a partir de sus colores,
   exceptuando blanco y negro"). Los archivos `.grd` originales son presets de Photoshop y no se pueden
   usar directamente en la web.
-- Fotografía: se usaron 6 fotos del set "FOTOS PARA SITIO WEB" que sí bajaban por debajo de 10MB.
-  Quedaron 3 fotos sin usar (`20250508-IMG_4485`, `_MEL5732`, `20250508-IMG_5276`) porque pesaban entre
-  13–27MB en crudo y superan el límite de descarga de la herramienta usada en este proceso — si German
-  quiere incluirlas, hay que comprimirlas manualmente primero (o pedir que las re-exporten en <10MB) y
-  agregarlas a `src/assets/img/photos/`.
-- De los 10 logos en la carpeta `LOGOS`, se usaron 9. Falta `Logo - Quipus - Negro.png` (variante negra
-  del isotipo simple) — no se pudo descargar en este proceso; no es bloqueante porque el sitio usa las
-  variantes de imagotipo (que sí se bajaron completas) para header y footer.
+- Fotografía: 6 fotos en `src/assets/img/photos/` (una por sección, con velo/duotono morado sobre las
+  de backstage) y 5 fotos más en `src/assets/img/galeria/` para la sección "Así se ve la ejecución por
+  dentro" (con lightbox). Si aparecen más fotos buenas en la carpeta de Drive, la galería puede crecer.
+- Logos: los 9 archivos de imagotipo/isotipo en `src/assets/img/logos/` vienen recortados a su bounding
+  box real — los originales traían un lienzo cuadrado de 1000×1000px con ~85% de margen transparente,
+  lo que hacía que cualquier `height` en CSS escalara casi puro aire. Si se agregan variantes nuevas del
+  logo, hay que recortarlas igual antes de usarlas a tamaños chicos (header, favicon).
+- La cinta de "Hemos trabajado junto a" (`#clientes`) enlaza cada nombre a la URL real del cliente —
+  están todas cargadas. Para agregar o quitar un cliente, se edita el arreglo `clientesList` en
+  `src/index.njk`.
 - Recursos (blog y descargables) tiene contenido de ejemplo marcado con la etiqueta "Próximamente" —
   bórralo o reemplázalo desde el panel cuando haya contenido real.
