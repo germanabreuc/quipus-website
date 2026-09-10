@@ -49,3 +49,22 @@ collections:
       - { label: "Archivo", name: "file", widget: "file", required: false, hint: "Sube el PDF u otro archivo descargable." }
       - { label: "Marcar como ejemplo (Próximamente)", name: "placeholder", widget: "boolean", default: false }
       - { label: "permalink", name: "permalink", widget: "hidden", default: false }
+
+  - name: "ebooksPodcast"
+    label: "Ebooks Podcast ML"
+    label_singular: "Ebook"
+    folder: "src/ebooks-podcast"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter"
+    editor:
+      preview: false
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Portada", name: "cover", widget: "image", required: false, hint: "Opcional. Imagen de portada del ebook." }
+      - { label: "Archivo (PDF)", name: "file", widget: "file", required: false, hint: "Sube el PDF del ebook. Mientras esté vacío, se muestra como 'Próximamente'." }
+      - { label: "Orden", name: "orden", widget: "number", required: false, hint: "Número para controlar el orden en la lista (menor = primero). Si se deja vacío, aparece al final." }
+      - { label: "Marcar como ejemplo (Próximamente)", name: "placeholder", widget: "boolean", default: false, hint: "Actívalo solo para contenido de muestra, nunca para un ebook real." }
+      - { label: "permalink", name: "permalink", widget: "hidden", default: false }

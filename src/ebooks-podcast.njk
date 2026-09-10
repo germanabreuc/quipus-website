@@ -1,0 +1,70 @@
+---
+layout: base.njk
+title: "Ebooks del Maxwell Leadership Podcast en Español"
+description: "Descarga todos los ebooks que hemos creado para los oyentes del Maxwell Leadership Podcast en Español."
+permalink: "/recursos/ebooks-podcast/"
+noindex: true
+---
+
+<section class="hero" style="padding-block: var(--space-5) var(--space-4);">
+  <div class="container hero__inner">
+    <span class="eyebrow">Maxwell Leadership Podcast en Español</span>
+    <h1>Todos los ebooks del podcast, en un solo lugar.</h1>
+    <p class="lede">Deja tu nombre y correo una sola vez y desbloquea la biblioteca completa de
+      ebooks que hemos creado para los oyentes del podcast.</p>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="section-head">
+      <hr class="divider">
+      <h2 class="h3">Lo que vas a descargar</h2>
+    </div>
+    <div class="grid grid--2">
+      {% for item in collections.ebooksPodcast %}
+        <div class="recurso-card">
+          {% if item.data.placeholder %}<span class="badge">Próximamente</span>{% endif %}
+          <h3>{{ item.data.title }}</h3>
+          <p>{{ item.data.description }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section--tight">
+  <div class="container">
+    <div class="section-head">
+      <hr class="divider">
+      <h2 class="h3">Déjanos tu correo para descargar</h2>
+    </div>
+
+    <!--
+      ============================================================
+      PEGAR AQUÍ EL FORMULARIO DE HUBSPOT
+      ============================================================
+      1. En HubSpot: crea (o reutiliza) un formulario con campos
+         Nombre + Correo.
+      2. En la configuración del formulario, en "Opciones al enviar"
+         (Post-submit options), elige "Redirigir a otra URL" y pon:
+             https://quipusmx.com/recursos/ebooks-podcast/gracias/
+      3. En HubSpot copia el código de inserción del formulario
+         (Compartir > Insertar en tu sitio web web) y pégalo
+         reemplazando este comentario. Suele verse así:
+
+         <script src="https://js.hsforms.net/forms/embed/TU_PORTAL_ID.js"></script>
+         <div class="hs-form-frame" data-region="na1"
+              data-form-id="TU_FORM_ID" data-portal-id="TU_PORTAL_ID"></div>
+
+      4. Crea (o reutiliza) un workflow en HubSpot que, al enviarse
+         ESTE formulario, inscriba al contacto en una sola lista
+         estática, por ejemplo:
+             "Podcast ML ES — Descargó biblioteca de ebooks"
+         Esa lista reemplaza, hacia adelante, los tres segmentos
+         separados que tenías por libro.
+      ============================================================
+    -->
+
+  </div>
+</section>
