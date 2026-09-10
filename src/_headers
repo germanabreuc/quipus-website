@@ -1,0 +1,5 @@
+/biblioteca
+  X-Robots-Tag: noindex
+
+/biblioteca/*
+  X-Robots-Tag: noindex

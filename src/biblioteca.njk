@@ -1,0 +1,275 @@
+---
+permalink: "/biblioteca/"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- NO BORRAR: evita que Google muestre esta página -->
+<meta name="robots" content="noindex, nofollow">
+<title>Biblioteca de ebooks | Maxwell Leadership Podcast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --arena: #F5F1E8;
+    --tinta: #222222;
+    --gris: #E5E5E5;
+    --suave: #5C574F;
+    --violeta: #7344ED;
+    --rojo: #D84747;
+    --turquesa: #0DC5C7;
+    --amarillo: #EDC022;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--arena);
+    color: var(--tinta);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  main { flex: 1; width: 100%; }
+
+  a { color: inherit; }
+
+  .contenedor {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Encabezado */
+  .encabezado { padding: 28px 0; }
+  .marca {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.375rem;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+  }
+
+  /* Introducción */
+  .intro {
+    padding: 48px 0 72px;
+    max-width: 660px;
+  }
+  .intro h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(2.5rem, 6.5vw, 4.5rem);
+    line-height: 1.02;
+    letter-spacing: -0.028em;
+    font-variation-settings: "opsz" 144;
+  }
+  .intro p {
+    margin-top: 22px;
+    font-size: 1.1875rem;
+    color: var(--suave);
+    max-width: 32em;
+  }
+
+  /* Estante de ebooks */
+  .estante {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 64px 44px;
+    padding-bottom: 112px;
+  }
+
+  .ebook { display: flex; flex-direction: column; }
+
+  /* Portada tipográfica: se ve como un libro, con lomo a la izquierda */
+  .portada {
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 24px 22px 36px;
+    box-shadow: inset 9px 0 0 rgba(0, 0, 0, 0.17);
+    color: #FFFFFF;
+    overflow: hidden;
+  }
+  .portada__titulo {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 1.08;
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 72;
+  }
+  .portada__sello {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    opacity: 0.85;
+  }
+  .portada--violeta  { background: var(--violeta); }
+  .portada--rojo     { background: var(--rojo); }
+  .portada--turquesa { background: var(--turquesa); color: var(--tinta); }
+  .portada--amarillo { background: var(--amarillo); color: var(--tinta); }
+
+  /* Si usas la portada real en imagen */
+  .portada--imagen { padding: 0; box-shadow: none; }
+  .portada--imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .ebook h2 {
+    margin-top: 22px;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.3125rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .ebook p {
+    margin: 8px 0 20px;
+    color: var(--suave);
+    font-size: 1rem;
+  }
+
+  .abrir {
+    align-self: flex-start;
+    margin-top: auto;
+    display: inline-block;
+    padding: 12px 22px;
+    background: var(--tinta);
+    color: var(--arena);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background-color 0.15s ease;
+  }
+  .abrir:hover { background: var(--violeta); }
+  .abrir:focus-visible,
+  .marca:focus-visible,
+  .pie a:focus-visible {
+    outline: 3px solid var(--violeta);
+    outline-offset: 3px;
+  }
+
+  /* Pie oscuro */
+  .pie {
+    background: var(--tinta);
+    color: var(--arena);
+    padding: 44px 0;
+  }
+  .pie .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .pie .marca { color: var(--arena); }
+  .pie .sitio { font-size: 0.9375rem; }
+  .pie .sitio a { text-underline-offset: 3px; }
+
+  @media (max-width: 560px) {
+    .intro { padding: 32px 0 56px; }
+    .estante { gap: 56px; padding-bottom: 80px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .abrir { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <!-- Marca principal: el podcast. Si hay logo del podcast, va aquí -->
+    <span class="marca">Maxwell Leadership Podcast</span>
+  </div>
+</header>
+
+<main class="contenedor">
+
+  <section class="intro">
+    <h1>Tu biblioteca de ebooks</h1>
+    <p>Aquí están todos los ebooks del podcast. Guarda esta página en tus favoritos: cada ebook nuevo aparecerá aquí.</p>
+  </section>
+
+  <ul class="estante">
+
+    <!-- ===== EBOOK 1 ===== -->
+    <li class="ebook">
+      <div class="portada portada--violeta" aria-hidden="true">
+        <span class="portada__titulo">Cómo presentar una idea que nadie pueda ignorar</span>
+      </div>
+      <h2>Cómo presentar una idea que nadie pueda ignorar</h2>
+      <p>Prepara, enfoca y comunica tus ideas para que otros puedan entenderlas, recordarlas y responder.</p>
+      <a class="abrir" href="https://drive.google.com/file/d/1iVmfGSFIyViCYa1p4rdIWSXNQSTfUE19/preview" target="_blank" rel="noopener" aria-label="Abrir PDF: Cómo presentar una idea que nadie pueda ignorar">Abrir PDF</a>
+    </li>
+
+    <!-- ===== EBOOK 2 ===== -->
+    <li class="ebook">
+      <div class="portada portada--rojo" aria-hidden="true">
+        <span class="portada__titulo">Proximidad que transforma</span>
+      </div>
+      <h2>Proximidad que transforma</h2>
+      <p>El camino para ganar acceso, aportar valor y crecer junto a líderes extraordinarios.</p>
+      <a class="abrir" href="https://drive.google.com/file/d/1UdQiYy13VO9VyExgcJz2_J3dGIaa9J6y/preview" target="_blank" rel="noopener" aria-label="Abrir PDF: Proximidad que transforma">Abrir PDF</a>
+    </li>
+
+    <!-- ===== EBOOK 3 ===== -->
+    <li class="ebook">
+      <div class="portada portada--turquesa" aria-hidden="true">
+        <span class="portada__titulo">Cómo ser libre de los nueve pecados capitales del liderazgo</span>
+      </div>
+      <h2>Cómo ser libre de los nueve pecados capitales del liderazgo</h2>
+      <p>Por qué caen los líderes y las acciones que te alejarán de ese destino.</p>
+      <a class="abrir" href="https://drive.google.com/file/d/1CVCGPRvcmrUbSi5RdQUYKNVEBWAWJQjo/preview" target="_blank" rel="noopener" aria-label="Abrir PDF: Cómo ser libre de los nueve pecados capitales del liderazgo">Abrir PDF</a>
+    </li>
+
+    <!--
+    ===== PLANTILLA PARA AGREGAR UN EBOOK NUEVO =====
+    Copia este bloque, pégalo arriba de este comentario y cambia:
+    título (3 lugares), descripción, link y color de portada
+    (portada--violeta, portada--rojo, portada--turquesa o portada--amarillo).
+
+    <li class="ebook">
+      <div class="portada portada--amarillo" aria-hidden="true">
+        <span class="portada__titulo">Título del ebook nuevo</span>
+      </div>
+      <h2>Título del ebook nuevo</h2>
+      <p>Una línea que diga de qué trata y para quién es.</p>
+      <a class="abrir" href="PEGA_AQUI_LINK_PDF" target="_blank" rel="noopener" aria-label="Abrir PDF: Título del ebook nuevo">Abrir PDF</a>
+    </li>
+
+    Si tienes la portada real en imagen, cambia el bloque "portada" por:
+    <div class="portada portada--imagen">
+      <img src="/img/portada-ebook.jpg" alt="Portada del ebook Título">
+    </div>
+    -->
+
+  </ul>
+
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <span class="marca">Maxwell Leadership Podcast</span>
+    <p class="sitio">Producido por <a href="https://quipusmx.com">Quipus</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
