@@ -20,14 +20,6 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/descargables/*.md");
   });
 
-  eleventyConfig.addCollection("ebooksPodcast", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/ebooks-podcast/*.md").sort((a, b) => {
-      const orderA = a.data.orden ?? 9999;
-      const orderB = b.data.orden ?? 9999;
-      return orderA - orderB;
-    });
-  });
-
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   eleventyConfig.addFilter("readableDate", (dateStr) => {
