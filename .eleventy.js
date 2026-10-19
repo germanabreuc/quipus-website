@@ -11,9 +11,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
 
   eleventyConfig.addCollection("blogPosts", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("src/blog/*.md").sort((a, b) => {
-      return (b.data.date || "").localeCompare(a.data.date || "");
-    });
+    // Más reciente primero. Usa page.date (siempre es un objeto Date en Eleventy),
+    // así funciona igual si la fecha viene como texto o como fecha del CMS.
+    return collectionApi.getFilteredByGlob("src/blog/*.md").sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("descargables", function (collectionApi) {
