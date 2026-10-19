@@ -1,0 +1,495 @@
+---
+layout: base.njk
+title: "¿Qué tan listo estás para comenzar un podcast?"
+description: "Evalúa tu preparación para comenzar un podcast. 13 preguntas, unos 4 minutos. Recibe tu diagnóstico personalizado por correo."
+permalink: "/recursos/diagnostico-podcast/"
+
+# ---------------------------------------------------------------------------
+# Conexión con el Google Form. Las respuestas se guardan en el mismo Form
+# (y su hoja de cálculo / Apps Script) que ya usa Quipus.
+# IMPORTANTE: si cambias el texto de una opción aquí, cámbialo IGUAL en el
+# Google Form (y viceversa). Si no coinciden, Google descarta la respuesta.
+# ---------------------------------------------------------------------------
+googleForm:
+  action: "https://docs.google.com/forms/d/e/1FAIpQLSfFJYuZNogvQnr7l7mvD39XdQVYa_wJFEqxkyqnDeCCL4DTsg/formResponse"
+  viewform: "https://docs.google.com/forms/d/e/1FAIpQLSfFJYuZNogvQnr7l7mvD39XdQVYa_wJFEqxkyqnDeCCL4DTsg/viewform"
+  nombre: "entry.845621475"
+  correo: "entry.293420791"
+
+preguntas:
+  - entry: "entry.794932921"
+    texto: "¿Qué tan preparado estás para investigar, contrastar perspectivas y aprender mientras produces episodios?"
+    opciones:
+      - "Tengo seis o más temas identificados y fuentes para documentarlos."
+      - "Tengo varios temas y sé dónde buscar información confiable."
+      - "Tengo algunas ideas, pero aún me cuesta convertirlas en temas."
+      - "Todavía no sé qué podría investigar y compartir con continuidad."
+  - entry: "entry.860721375"
+    texto: "¿Qué tan definido está el tema en el que quieres convertirte en una referencia?"
+    opciones:
+      - "Puedo expresarlo en una frase específica y sé qué perspectiva aportaré."
+      - "Tengo una especialidad definida, aunque necesito acotar el enfoque."
+      - "Manejo distintos temas y todavía no elijo uno como eje."
+      - "Aún no tengo un tema central."
+  - entry: "entry.1090482658"
+    texto: "¿Con qué experiencia y conocimientos puedes respaldar las ideas que compartirás?"
+    opciones:
+      - "Tengo casos, experiencia y argumentos que puedo explicar con ejemplos."
+      - "Tengo experiencia relevante, aunque debo organizar mejor mis ejemplos."
+      - "Tengo interés y algunas experiencias, pero me falta sustento concreto."
+      - "Todavía necesito desarrollar conocimientos o experiencia en ese tema."
+  - entry: "entry.1173498598"
+    texto: "¿Qué tan bien identificas a las personas a las que tu podcast podría ayudar?"
+    opciones:
+      - "Tengo identificado un público específico y conozco sus preguntas habituales."
+      - "Sé a qué tipo de personas quiero llegar, con algunas dudas sobre sus necesidades."
+      - "Pienso en un público muy amplio y aún no tengo un perfil claro."
+      - "Todavía no sé para quién sería el podcast."
+  - entry: "entry.1190077060"
+    texto: "¿Qué tan claro tienes qué problemas de tus clientes o audiencia puedes abordar en los episodios?"
+    opciones:
+      - "Conozco problemas concretos y puedo plantear episodios que los expliquen."
+      - "Reconozco necesidades frecuentes, aunque todavía no las organicé en temas."
+      - "Tengo ideas generales sobre lo que puede interesarles."
+      - "Aún desconozco los problemas que esperan resolver."
+  - entry: "entry.1497914483"
+    texto: "¿Qué ofrecerás para que alguien quiera escucharte de nuevo y construir confianza contigo?"
+    opciones:
+      - "Tengo claro el tipo de conversación, el valor que entregaré y el estilo del programa."
+      - "Tengo una propuesta interesante, aunque falta definir la experiencia del oyente."
+      - "Quiero conversar sobre temas útiles, pero el formato aún está abierto."
+      - "Todavía no sé por qué alguien elegiría escucharme con frecuencia."
+  - entry: "entry.196098841"
+    texto: "Si decidieras publicar durante ocho semanas, ¿qué capacidad real tendrías de producir con continuidad?"
+    opciones:
+      - "Tengo tiempo, responsables y una ruta clara para grabar, editar y publicar."
+      - "Tengo los recursos principales, pero falta organizar el calendario y las tareas."
+      - "Podría liberar tiempo, aunque aún no he resuelto la producción."
+      - "Hoy no tengo tiempo ni una solución para producir de forma sostenida."
+  - entry: "entry.1899337339"
+    texto: "¿Qué tan identificadas tienes a las personas con quienes tu podcast podría abrir conversaciones profesionales?"
+    opciones:
+      - "Tengo una lista concreta de invitados o aliados y sé cómo acercarme."
+      - "Tengo nombres en mente y algunas vías para contactarlos."
+      - "Conozco perfiles interesantes, pero todavía no tengo candidatos concretos."
+      - "Aún no he pensado en las relaciones que podría generar el podcast."
+  - entry: "entry.623670044"
+    texto: "¿Qué valor podrías ofrecer a las personas que invites a conversar?"
+    opciones:
+      - "Puedo explicar un beneficio relevante para el invitado y la audiencia."
+      - "Tengo una propuesta de conversación valiosa, aunque necesito afinarla."
+      - "Me gustaría invitar a personas reconocidas, pero falta una propuesta clara."
+      - "Todavía no sé por qué alguien aceptaría participar."
+  - entry: "entry.982759295"
+    texto: "¿Qué tan preparada está tu presencia digital para distribuir el podcast y atraer a sus primeros oyentes?"
+    opciones:
+      - "Tengo canales activos, una comunidad identificable y un plan inicial de difusión."
+      - "Tengo canales activos, pero necesito mejorar frecuencia y conexión con la audiencia."
+      - "Tengo perfiles digitales con poca actividad y casi ninguna comunidad."
+      - "Hoy carezco de canales activos para dar a conocer el podcast."
+  - entry: "entry.1264697377"
+    texto: "¿Cómo aprovecharías un episodio para crear contenidos adicionales que fortalezcan tu marca?"
+    opciones:
+      - "Sé cómo convertir cada episodio en clips, publicaciones y materiales para varios canales."
+      - "Tengo ideas para reutilizar episodios, aunque falta un proceso editorial."
+      - "Publicaría algunos clips cuando tenga tiempo."
+      - "Todavía no he pensado cómo aprovechar el contenido fuera del episodio."
+  - entry: "entry.1513197054"
+    texto: "¿Qué objetivo concreto quieres que el podcast aporte a tu marca o negocio, más allá de generar ingresos directos?"
+    opciones:
+      - "Tengo un objetivo definido de reputación, autoridad, confianza o relación con clientes."
+      - "Tengo una prioridad de marca, pero aún necesito precisarla."
+      - "Quiero mayor visibilidad, aunque no he definido para qué."
+      - "Todavía no sé qué resultado espero obtener para mi marca o negocio."
+  - entry: "entry.700029574"
+    texto: "¿Cómo sabrías, después de 90 días, si el podcast está aportando valor a tu negocio?"
+    opciones:
+      - "Tengo indicadores definidos, además de reproducciones: contactos, confianza o posicionamiento."
+      - "Sé qué señales observaría, pero todavía no establecí indicadores concretos."
+      - "Revisaría principalmente reproducciones y seguidores."
+      - "Aún no he pensado cómo evaluaría sus resultados."
+---
+
+<style>
+  /* ---------------------------------------------- Diagnóstico (scoped) -- */
+  .dx { max-width: 760px; margin-inline: auto; }
+
+  .dx-card {
+    position: relative;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: var(--radius);
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    padding: clamp(1.75rem, 4vw, 3rem);
+  }
+  .dx-card::before {
+    content: ""; position: absolute; inset: 0 0 auto 0; height: 4px;
+    background: var(--gradient-quipus);
+  }
+
+  /* Progreso */
+  .dx-progress { display: flex; align-items: center; gap: 1rem; margin-bottom: var(--space-3); }
+  .dx-progress__bar {
+    flex: 1; height: 6px; border-radius: 999px;
+    background: var(--grey-light); overflow: hidden;
+  }
+  .dx-progress__fill {
+    height: 100%; width: 0; border-radius: 999px;
+    background: var(--gradient-quipus);
+    background-size: 760px 100%;
+    transition: width 0.35s ease;
+  }
+  .dx-progress__label {
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
+    color: #6b6858; font-variant-numeric: tabular-nums; white-space: nowrap;
+  }
+
+  /* Pasos */
+  .js-dx .dx-step { display: none; }
+  .js-dx .dx-step.is-active { display: block; animation: dx-in 0.35s ease both; }
+  .dx-step + .dx-step { margin-top: var(--space-4); }
+  .js-dx .dx-step + .dx-step { margin-top: 0; }
+  @keyframes dx-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .js-dx .dx-step.is-active { animation: none; }
+    .dx-progress__fill { transition: none; }
+  }
+
+  .dx-step__head:focus { outline: none; }
+  .dx-num {
+    display: inline-flex; align-items: baseline; gap: 0.35em;
+    font-family: var(--font-display); font-size: 1rem; color: var(--purple);
+    margin-bottom: 0.75rem;
+  }
+  .dx-num::before {
+    content: ""; display: inline-block; width: 32px; height: 4px; border-radius: 999px;
+    background: var(--accent, var(--purple)); transform: translateY(-0.25em);
+  }
+  .dx-step__q {
+    font-size: clamp(1.45rem, 3vw, 2.1rem);
+    line-height: 1.15;
+    margin-bottom: var(--space-3);
+  }
+
+  /* Opciones */
+  .dx-options { border: 0; margin: 0; padding: 0; display: grid; gap: 0.75rem; }
+  .dx-option { position: relative; display: block; cursor: pointer; }
+  .dx-option input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+  .dx-option__box {
+    display: grid; grid-template-columns: auto 1fr; gap: 0.9rem; align-items: start;
+    padding: 1rem 1.15rem;
+    border: 1px solid rgba(34, 34, 34, 0.16);
+    border-radius: 14px;
+    background: var(--bg);
+    transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+  }
+  .dx-option__key {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 1.75rem; height: 1.75rem; border-radius: 8px;
+    border: 1px solid rgba(34, 34, 34, 0.22);
+    font-size: 0.8rem; font-weight: 700; color: #55524a; background: var(--white);
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .dx-option__text { font-size: 1rem; line-height: 1.45; padding-top: 0.1rem; }
+  .dx-option:hover .dx-option__box { border-color: var(--ink); transform: translateY(-1px); }
+  .dx-option input:focus-visible + .dx-option__box { outline: 2px solid var(--purple); outline-offset: 2px; }
+  .dx-option input:checked + .dx-option__box {
+    border-color: var(--purple);
+    background: rgba(115, 68, 237, 0.07);
+  }
+  .dx-option input:checked + .dx-option__box .dx-option__key {
+    background: var(--purple); border-color: var(--purple); color: var(--white);
+  }
+
+  /* Datos */
+  .dx-fields { display: grid; gap: 1.1rem; margin-bottom: var(--space-3); }
+  .dx-field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4em; }
+  .dx-field input {
+    width: 100%; border: 1px solid rgba(34, 34, 34, 0.25); border-radius: 10px;
+    padding: 0.85em 1em; font-family: var(--font-body); font-size: 1rem;
+    background: var(--white); color: var(--ink);
+  }
+  .dx-field input:focus { outline: 2px solid var(--purple); outline-offset: 1px; }
+  .dx-field input[aria-invalid="true"] { border-color: var(--red); }
+  .dx-error { color: var(--red); font-size: 0.85rem; font-weight: 600; margin: 0.4em 0 0; min-height: 0; }
+  .dx-error:empty { display: none; }
+
+  .dx-privacy {
+    background: var(--bg); border-radius: 12px; padding: 1rem 1.15rem;
+    font-size: 0.85rem; line-height: 1.55; color: #4a473f; margin-bottom: var(--space-3);
+  }
+  .dx-privacy summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+  .dx-privacy p { margin: 0.7em 0 0; max-width: none; }
+
+  /* Navegación */
+  .dx-nav {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    margin-top: var(--space-3); flex-wrap: wrap;
+  }
+  .dx-back {
+    background: none; border: 0; padding: 0.5em 0; cursor: pointer;
+    font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; color: #55524a;
+  }
+  .dx-back:hover { color: var(--ink); }
+  .dx-nav .btn { font-family: var(--font-body); }
+  .dx-nav .btn--primary { margin-left: auto; }
+  .dx-nav .btn[disabled] { opacity: 0.35; cursor: not-allowed; transform: none; }
+  .dx-nav .btn[disabled]:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+  .dx-hint { font-size: 0.8rem; color: #6b6858; margin: 0; }
+  .no-js-hide { display: none; }
+  .js-dx .no-js-hide { display: inline-flex; }
+  .js-dx .dx-progress.no-js-hide { display: flex; }
+  .js-dx .dx-back[hidden] { display: none; }
+  .js-dx .js-hide { display: none; }
+
+  /* Resultado */
+  .dx-done { text-align: left; }
+  .dx-done[hidden] { display: none; }
+  .dx-done h2 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+  .dx-done h2 em {
+    font-style: italic; font-weight: 480;
+    background: var(--gradient-quipus); -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .dx-done__actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: var(--space-3); }
+
+  .dx-status { font-size: 0.9rem; margin: 1rem 0 0; }
+  .dx-status--error { color: var(--red); font-weight: 600; }
+  .dx-status a { color: inherit; }
+
+  @media (max-width: 700px) {
+    .dx-option__box { padding: 0.9rem 1rem; }
+    .dx-nav .btn--primary { width: 100%; justify-content: center; }
+  }
+</style>
+
+<section class="hero" style="padding-block: var(--space-5) var(--space-4);">
+  <div class="container hero__inner">
+    <span class="eyebrow">Diagnóstico · Podcast</span>
+    <h1>¿Qué tan listo estás para comenzar un <em>podcast</em>?</h1>
+    <p class="lede">13 preguntas de opción única sobre tu situación actual. Unos 4 minutos. Al terminar,
+      te enviamos tu diagnóstico personalizado por correo.</p>
+  </div>
+</section>
+
+<section class="section--tight" style="padding-top:0;">
+  <div class="container">
+    <div class="dx" id="dx">
+      <div class="dx-card">
+
+        <form id="dx-form" action="{{ googleForm.action }}" method="POST" target="_blank" novalidate>
+          <input type="hidden" name="pageHistory" value="0,1">
+          <input type="hidden" name="fvv" value="1">
+
+          <div class="dx-progress no-js-hide" aria-hidden="true">
+            <div class="dx-progress__bar"><div class="dx-progress__fill" id="dx-fill"></div></div>
+            <span class="dx-progress__label" id="dx-count">0 / {{ preguntas.length }}</span>
+          </div>
+
+          {# Paso 0 — datos #}
+          <div class="dx-step is-active" data-step="0">
+            <h2 class="dx-step__head h3" tabindex="-1">Primero, tus datos.</h2>
+            <p>Lee el aviso de privacidad antes de continuar. Usaremos tus datos para enviarte el
+              diagnóstico e información y contenido periódicos, conforme al aviso.</p>
+
+            <div class="dx-fields">
+              <div class="dx-field">
+                <label for="dx-nombre">Nombre y apellido</label>
+                <input id="dx-nombre" name="{{ googleForm.nombre }}" type="text" autocomplete="name" required>
+                <p class="dx-error" id="dx-nombre-err" aria-live="polite"></p>
+              </div>
+              <div class="dx-field">
+                <label for="dx-correo">Correo electrónico</label>
+                <input id="dx-correo" name="{{ googleForm.correo }}" type="email" autocomplete="email" inputmode="email" required>
+                <p class="dx-error" id="dx-correo-err" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <details class="dx-privacy">
+              <summary>Aviso de privacidad</summary>
+              <p>QUIPUS, bajo la responsabilidad de Germán Alberto Abreu, con domicilio en Saltillo, México,
+                utilizará tu nombre, correo electrónico y respuestas para evaluar tu preparación para comenzar
+                un podcast, generar tu diagnóstico personalizado y enviártelo por correo.</p>
+              <p>La información se procesará mediante Google Forms, Google Sheets y Apps Script. Tus datos
+                formarán parte de una base de datos a través de la cual recibirás información y contenido de
+                forma periódica.</p>
+              <p>Para solicitar acceso, rectificación, cancelación u oposición al uso de tus datos, revocar tu
+                consentimiento o limitar su uso, escribe a <a href="mailto:hola@quipusmx.com">hola@quipusmx.com</a>
+                e indica tu solicitud.</p>
+            </details>
+          </div>
+
+          {# Pasos 1–13 — preguntas #}
+          {% set acentos = ["var(--purple)", "var(--red)", "var(--cyan)", "var(--yellow)"] %}
+          {% set letras = ["A", "B", "C", "D", "E", "F"] %}
+          {% for p in preguntas %}
+          <div class="dx-step" data-step="{{ loop.index }}" style="--accent: {{ acentos[loop.index0 % 4] }};">
+            <span class="dx-num">{% if loop.index < 10 %}0{% endif %}{{ loop.index }} <span class="visually-hidden">de {{ preguntas.length }}</span></span>
+            <h2 class="dx-step__head dx-step__q" id="dx-q{{ loop.index }}" tabindex="-1">{{ p.texto }}</h2>
+            <fieldset class="dx-options" aria-labelledby="dx-q{{ loop.index }}">
+              {% for o in p.opciones %}
+              <label class="dx-option">
+                <input type="radio" name="{{ p.entry }}" value="{{ o }}" required>
+                <span class="dx-option__box">
+                  <span class="dx-option__key" aria-hidden="true">{{ letras[loop.index0] }}</span>
+                  <span class="dx-option__text">{{ o }}</span>
+                </span>
+              </label>
+              {% endfor %}
+            </fieldset>
+          </div>
+          {% endfor %}
+
+          <div class="dx-nav">
+            <button type="button" class="dx-back no-js-hide" id="dx-back" hidden>&larr; Anterior</button>
+            <button type="submit" class="btn btn--primary" id="dx-next">
+              <span class="js-hide">Enviar y recibir mi diagnóstico</span>
+              <span class="no-js-hide" id="dx-next-label">Comenzar</span>
+            </button>
+          </div>
+          <p class="dx-status" id="dx-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="dx-done" id="dx-done" hidden>
+          <span class="eyebrow">Listo</span>
+          <h2 tabindex="-1" id="dx-done-title">Gracias, <em id="dx-done-name">ya terminaste</em>.</h2>
+          <p class="lede">Tu diagnóstico va en camino a <strong id="dx-done-email">tu correo</strong>. Si no lo
+            ves en unos minutos, revisa las carpetas de spam o promociones.</p>
+          <p>Si quieres conversar sobre lo que encontraste, escríbenos.</p>
+          <div class="dx-done__actions">
+            <a class="btn btn--primary" href="/hablemos/">Hablemos</a>
+            <a class="btn btn--ghost" href="/recursos/">Ver más recursos</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var root = document.getElementById("dx");
+  var form = document.getElementById("dx-form");
+  if (!root || !form || !window.fetch || !window.URLSearchParams) return; // sin JS moderno: el form se envía directo a Google
+
+  root.classList.add("js-dx");
+
+  var steps = Array.prototype.slice.call(form.querySelectorAll(".dx-step"));
+  var total = steps.length - 1; // preguntas (sin contar el paso de datos)
+  var current = 0;
+  var sending = false;
+  var lastPointer = false;
+
+  var back = document.getElementById("dx-back");
+  var next = document.getElementById("dx-next");
+  var nextLabel = document.getElementById("dx-next-label");
+  var fill = document.getElementById("dx-fill");
+  var count = document.getElementById("dx-count");
+  var status = document.getElementById("dx-status");
+  var nombre = document.getElementById("dx-nombre");
+  var correo = document.getElementById("dx-correo");
+
+  // Solo enviamos respuestas reales desde el sitio publicado (o un deploy de Netlify / local).
+  // En cualquier otro lado (vistas previas) la página funciona pero no envía nada.
+  var host = location.hostname;
+  var LIVE = /(^|\.)quipusmx\.com$/.test(host) || /\.netlify\.app$/.test(host) || host === "localhost" || host === "127.0.0.1";
+
+  function answered(i) {
+    return !!steps[i].querySelector("input[type=radio]:checked");
+  }
+
+  function setError(input, msg) {
+    var err = document.getElementById(input.id + "-err");
+    err.textContent = msg || "";
+    if (msg) input.setAttribute("aria-invalid", "true"); else input.removeAttribute("aria-invalid");
+  }
+
+  function validData() {
+    var ok = true;
+    var n = nombre.value.trim();
+    var c = correo.value.trim();
+    if (n.length < 2) { setError(nombre, "Escribe tu nombre y apellido."); ok = false; } else setError(nombre);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(c)) { setError(correo, "Revisa tu correo: lo necesitamos para enviarte el diagnóstico."); ok = false; } else setError(correo);
+    if (!ok) (n.length < 2 ? nombre : correo).focus();
+    return ok;
+  }
+
+  function render(focus) {
+    steps.forEach(function (s, i) { s.classList.toggle("is-active", i === current); });
+    var done = 0;
+    for (var i = 1; i <= total; i++) if (answered(i)) done++;
+    fill.style.width = (done / total * 100) + "%";
+    count.textContent = (current === 0 ? 0 : current) + " / " + total;
+    back.hidden = current === 0;
+
+    if (current === 0) { nextLabel.textContent = "Comenzar"; next.disabled = false; }
+    else if (current === total) { nextLabel.textContent = "Enviar y recibir mi diagnóstico"; next.disabled = !answered(current); }
+    else { nextLabel.textContent = "Siguiente"; next.disabled = !answered(current); }
+
+    if (focus) {
+      var head = steps[current].querySelector(".dx-step__head");
+      if (head) head.focus({ preventScroll: true });
+      var top = root.getBoundingClientRect().top + window.pageYOffset - 110;
+      if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  }
+
+  function go(i) { current = Math.max(0, Math.min(total, i)); status.textContent = ""; status.className = "dx-status"; render(true); }
+
+  back.addEventListener("click", function () { go(current - 1); });
+
+  // Selección de opción: avanza solo si fue con clic/tap (no con flechas del teclado).
+  form.addEventListener("pointerdown", function () { lastPointer = true; });
+  form.addEventListener("keydown", function (e) {
+    lastPointer = false;
+    if (e.key === "Enter" && current > 0 && e.target.type === "radio") { e.preventDefault(); if (!next.disabled) next.click(); }
+  });
+  form.addEventListener("change", function (e) {
+    if (e.target.type !== "radio") return;
+    render(false);
+    if (lastPointer && current < total) setTimeout(function () { go(current + 1); }, 320);
+  });
+
+  [nombre, correo].forEach(function (el) {
+    el.addEventListener("input", function () { if (el.getAttribute("aria-invalid")) setError(el); });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (current === 0) { if (validData()) go(1); return; }
+    if (!answered(current)) return;
+    if (current < total) { go(current + 1); return; }
+
+    // Último paso: verificar todo y enviar.
+    if (!validData()) { go(0); return; }
+    for (var i = 1; i <= total; i++) if (!answered(i)) { go(i); return; }
+    if (sending) return;
+    sending = true;
+    next.disabled = true;
+    nextLabel.textContent = "Enviando…";
+
+    var body = new URLSearchParams(new FormData(form));
+    var send = LIVE
+      ? fetch(form.action, { method: "POST", mode: "no-cors", body: body })
+      : new Promise(function (r) { setTimeout(r, 600); });
+
+    send.then(function () {
+      var first = nombre.value.trim().split(/\s+/)[0];
+      document.getElementById("dx-done-name").textContent = first || "ya terminaste";
+      document.getElementById("dx-done-email").textContent = correo.value.trim();
+      form.hidden = true;
+      var doneEl = document.getElementById("dx-done");
+      doneEl.hidden = false;
+      document.getElementById("dx-done-title").focus({ preventScroll: true });
+      window.scrollTo({ top: root.getBoundingClientRect().top + window.pageYOffset - 110, behavior: "smooth" });
+    }).catch(function () {
+      sending = false;
+      render(false);
+      status.className = "dx-status dx-status--error";
+      status.innerHTML = 'No pudimos enviar tus respuestas. Revisa tu conexión e inténtalo de nuevo, o responde <a href="{{ googleForm.viewform }}" target="_blank" rel="noopener">aquí</a>.';
+    });
+  });
+
+  render(false);
+})();
+</script>
