@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: ¿Y si el marketing nos está dañando?
-date: yyyy-09-Su
+date: yyyy-10-Mo
 excerpt: ''
 image: ''
 placeholder: false
