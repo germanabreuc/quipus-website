@@ -27,7 +27,7 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post.njk" }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime", format: "yyyy-MM-dd" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "yyyy-MM-dd", time_format: false, hint: "Da clic en «Ahora» para poner la fecha de hoy." }
       - { label: "Resumen", name: "excerpt", widget: "text", required: false, hint: "Se muestra en el listado de Recursos." }
       - { label: "Imagen de portada", name: "image", widget: "image", required: false }
       - { label: "Marcar como ejemplo (Próximamente)", name: "placeholder", widget: "boolean", default: false, hint: "Actívalo solo para contenido de muestra, nunca para un post real." }
