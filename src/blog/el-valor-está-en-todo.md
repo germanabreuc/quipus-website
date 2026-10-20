@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: El valor está en todo
-date: yyyy-10-Mo
+date: 2026-08-19
 excerpt: ''
 image: ''
 placeholder: false
