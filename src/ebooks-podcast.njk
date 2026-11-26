@@ -30,6 +30,10 @@ noindex: true
           <input id="eb-nombre" name="NOMBRE" type="text" autocomplete="given-name" maxlength="200" required>
         </div>
         <div class="eb-field">
+          <label for="eb-apellidos">Apellidos</label>
+          <input id="eb-apellidos" name="APELLIDOS" type="text" autocomplete="family-name" maxlength="200" required>
+        </div>
+        <div class="eb-field eb-field--full">
           <label for="eb-correo">Correo electrónico</label>
           <input id="eb-correo" name="EMAIL" type="email" autocomplete="email" inputmode="email" required>
         </div>
@@ -58,6 +62,7 @@ noindex: true
     <style>
       .eb-form { max-width: 560px; }
       .eb-fields { display: grid; gap: 1.1rem; margin-bottom: var(--space-2); }
+      @media (min-width: 640px) { .eb-fields { grid-template-columns: 1fr 1fr; } .eb-field--full { grid-column: 1 / -1; } }
       .eb-field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4em; }
       .eb-field input {
         width: 100%; border: 1px solid rgba(34, 34, 34, 0.25); border-radius: 10px;
@@ -81,6 +86,7 @@ noindex: true
         var msg = document.getElementById('eb-msg');
         var done = document.getElementById('eb-done');
         var nombre = document.getElementById('eb-nombre');
+        var apellidos = document.getElementById('eb-apellidos');
         var correo = document.getElementById('eb-correo');
         var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -93,9 +99,11 @@ noindex: true
           e.preventDefault();
           msg.textContent = '';
           nombre.removeAttribute('aria-invalid');
+          apellidos.removeAttribute('aria-invalid');
           correo.removeAttribute('aria-invalid');
           correo.value = correo.value.trim();
           if (!nombre.value.trim()) return fail('Escribe tu nombre.', nombre);
+          if (!apellidos.value.trim()) return fail('Escribe tus apellidos.', apellidos);
           if (!emailOk.test(correo.value)) return fail('Revisa tu correo electrónico.', correo);
 
           btn.disabled = true;
