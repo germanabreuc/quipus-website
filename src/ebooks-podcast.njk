@@ -22,9 +22,103 @@ noindex: true
       <h2 class="h3">Déjanos tu correo para descargar</h2>
     </div>
 
-    <script src="https://js.hsforms.net/forms/embed/49262916.js"></script>
-    <div class="hs-form-frame" data-region="na1"
-         data-form-id="aba4c228-0efd-4ed5-a808-d37c88637e8d" data-portal-id="49262916"></div>
+    <form id="eb-form" class="eb-form" method="POST" novalidate
+          action="https://11741e39.sibforms.com/serve/MUIFALAm7-42Hl2IHpPwaRTdc3sN4BscNHNHzYvLZT-UhYFGK7JxgSwgjm6_c8pD1SCNT39ZozCJZ_Zip-o8Jsb933ZJp6E87qQietReujLq87m5VXJvKgIYD0MZ7liMptBoTHlb2jS2konererRr0Sz5pXxGurtcEgcKmkJrojf026nq0kYKvyhDJS1M2Ug50Aw0O0SMCDHcZVCMA==">
+      <div class="eb-fields">
+        <div class="eb-field">
+          <label for="eb-nombre">Nombre</label>
+          <input id="eb-nombre" name="NOMBRE" type="text" autocomplete="given-name" maxlength="200" required>
+        </div>
+        <div class="eb-field">
+          <label for="eb-correo">Correo electrónico</label>
+          <input id="eb-correo" name="EMAIL" type="email" autocomplete="email" inputmode="email" required>
+        </div>
+      </div>
+
+      {# Campo trampa contra bots (Brevo) y ajustes del formulario #}
+      <input type="text" name="email_address_check" value="" class="eb-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="locale" value="es">
+      <input type="hidden" name="html_type" value="simple">
+
+      <p class="eb-legal">Te enviaremos un correo para confirmar tu dirección; al confirmarla entrarás a la
+        biblioteca. Usamos tus datos para darte acceso a los ebooks y enviarte contenido del podcast.
+        Para cualquier solicitud sobre tus datos, escribe a <a href="mailto:hola@quipusmx.com">hola@quipusmx.com</a>.</p>
+
+      <button type="submit" class="btn btn--primary" id="eb-submit">Quiero los ebooks</button>
+      <p class="eb-msg" id="eb-msg" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="eb-done" id="eb-done" hidden tabindex="-1">
+      <h3 class="h3">Revisa tu correo.</h3>
+      <p>Te enviamos un mensaje de <strong>hola@quipusmx.com</strong>. Ábrelo y pulsa
+        <strong>«Sí, quiero mis ebooks»</strong> para entrar a la biblioteca. Si no lo ves en unos minutos,
+        revisa la carpeta de spam o de promociones.</p>
+    </div>
+
+    <style>
+      .eb-form { max-width: 560px; }
+      .eb-fields { display: grid; gap: 1.1rem; margin-bottom: var(--space-2); }
+      .eb-field label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.4em; }
+      .eb-field input {
+        width: 100%; border: 1px solid rgba(34, 34, 34, 0.25); border-radius: 10px;
+        padding: 0.85em 1em; font-family: var(--font-body); font-size: 1rem;
+        background: var(--white); color: var(--ink);
+      }
+      .eb-field input:focus { outline: 2px solid var(--purple); outline-offset: 1px; }
+      .eb-field input[aria-invalid="true"] { border-color: var(--red); }
+      .eb-hp { position: absolute !important; left: -9999px !important; width: 1px; height: 1px; opacity: 0; }
+      .eb-legal { font-size: 0.85rem; opacity: 0.75; margin: 0 0 var(--space-2); max-width: 52ch; }
+      .eb-msg { color: var(--red); font-size: 0.9rem; font-weight: 600; margin: 0.8em 0 0; }
+      .eb-msg:empty { display: none; }
+      .eb-done { max-width: 560px; background: var(--white); border-radius: var(--radius); padding: var(--space-3); }
+      .eb-done:focus { outline: none; }
+    </style>
+
+    <script>
+      (function () {
+        var form = document.getElementById('eb-form');
+        var btn = document.getElementById('eb-submit');
+        var msg = document.getElementById('eb-msg');
+        var done = document.getElementById('eb-done');
+        var nombre = document.getElementById('eb-nombre');
+        var correo = document.getElementById('eb-correo');
+        var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+        function fail(text, field) {
+          msg.textContent = text;
+          if (field) { field.setAttribute('aria-invalid', 'true'); field.focus(); }
+        }
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          msg.textContent = '';
+          nombre.removeAttribute('aria-invalid');
+          correo.removeAttribute('aria-invalid');
+          correo.value = correo.value.trim();
+          if (!nombre.value.trim()) return fail('Escribe tu nombre.', nombre);
+          if (!emailOk.test(correo.value)) return fail('Revisa tu correo electrónico.', correo);
+
+          btn.disabled = true;
+          btn.textContent = 'Enviando…';
+          fetch(form.action + '?isAjax=1', { method: 'POST', body: new FormData(form) })
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              if (data && data.success) {
+                form.hidden = true;
+                done.hidden = false;
+                done.focus();
+              } else {
+                throw new Error('brevo');
+              }
+            })
+            .catch(function () {
+              btn.disabled = false;
+              btn.textContent = 'Quiero los ebooks';
+              fail('No pudimos registrar tus datos. Inténtalo de nuevo en un momento o escríbenos a hola@quipusmx.com.');
+            });
+        });
+      })();
+    </script>
 
   </div>
 </section>
